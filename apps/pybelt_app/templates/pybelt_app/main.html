@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'pybelt_app/css/main.css' %}" media="screen" title="no title" charset="utf-8" />
+</head>
+<body>
+  <!-- <h1>Registration page</h1> -->
+  <div class="reg">
+      <h3>Register</h3>
+      <form action="/create" method="post">
+        {% csrf_token %}
+        <label>Name:</label>
+        <input type="text" name="name" />
+        <br>
+        <label>Alias:</label>
+        <input type="text" name="alias" />
+        <br>
+        <label>Email:</label>
+        <input type="email" name="email" />
+        <br>
+        <label>Password:</label>
+        <input type="password" name="password" />
+        <p>Password must be at least 8 characters</p>
+        <label>Password Confirmation:</label>
+        <input type="password" name="pw_confirm" />
+        <br>
+        <label>Birthday:</label>
+        <input type="date" name="dob" />
+        <br>
+        <input type="submit" value="Register" />
+      </form>
+  </div>
+  <!-- <br><br> -->
+  <div class="login">
+      <h3>Login</h3>
+      <form action="/login" method="post">
+        {% csrf_token %}
+        <label>Email:</label>
+        <input type="email" name="email" />
+        <br>
+        <label>Password:</label>
+        <input type="password" name="password" />
+        <br>
+        <input type="submit" value="Login" />
+      </form>
+  </div>
+</body>
+</html>

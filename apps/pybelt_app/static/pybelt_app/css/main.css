@@ -1,0 +1,14 @@
+*{
+  background-color: #777799;
+}
+.login{
+  border: 2px solid black;
+  width: 220px;
+}
+#activities{
+  border: 2px solid black;
+}
+.reg{
+  border: 2px solid black;
+  width: 220px;
+}
